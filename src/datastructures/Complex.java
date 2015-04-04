@@ -17,6 +17,14 @@ public class Complex {
         return new Complex(this.Re - z.Re, this.Im - z.Im);
     }
     
+    public Complex mul(Complex z) {
+        return new Complex(this.Re - z.Re, this.Im - z.Im);
+    }
+    
+    public Complex conj(Complex z) {
+        return new Complex(this.Re - z.Re, this.Im - z.Im);
+    }
+    
     @Override
     public String toString() {
         if(Im > 0)

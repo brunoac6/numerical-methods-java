@@ -2,6 +2,7 @@ package tests;
 
 import datastructures.Complex;
 import datastructures.Vector;
+import datastructures.HugeInteger;
 
 public class Tests {
 
@@ -19,6 +20,9 @@ public class Tests {
         
         System.out.println(v1);
         
+        /* Test Class HugeInteger */
+        HugeInteger i1 = new HugeInteger("12392972309239822983293",10);
+        System.out.println(i1);
     }
     
 }
