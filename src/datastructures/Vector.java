@@ -36,17 +36,17 @@ public class Vector {
             return sum;
         }
     }
-    /*
+    
     @Override
     public String toString() {
         String tmp;
         tmp = "(";
-        for(int i=0; i<dim; i++) {
-            tmp += (char) v[i];
+        tmp += v[0];
+        for(int i=1; i<dim; i++) {
             tmp += ", ";
+            tmp += v[i];
         }
         tmp += ")";
         return tmp;
     }
-    */
 }

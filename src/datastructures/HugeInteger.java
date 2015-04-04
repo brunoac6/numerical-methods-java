@@ -37,6 +37,9 @@ public class HugeInteger {
     
     @Override
     public String toString() {
-        return Arrays.toString(number);
+        String tmp = "";
+        for(int i=0; i<tam; i++)
+            tmp += number[i];
+        return tmp;
     }
 }
