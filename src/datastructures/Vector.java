@@ -26,8 +26,27 @@ public class Vector {
         }
     }
     
+    public double dot(Vector v) {
+        if(this.dim != v.dim) 
+            return -1;
+        else {
+            double sum = 0;
+            for(int i=0; i<v.dim; i++)
+                sum = this.v[i]*v.v[i];
+            return sum;
+        }
+    }
+    /*
     @Override
     public String toString() {
-        return String.format("( %d )", 0b1);
+        String tmp;
+        tmp = "(";
+        for(int i=0; i<dim; i++) {
+            tmp += (char) v[i];
+            tmp += ", ";
+        }
+        tmp += ")";
+        return tmp;
     }
+    */
 }
