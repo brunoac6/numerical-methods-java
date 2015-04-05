@@ -21,9 +21,34 @@ public class Matrix {
         }
     }
     
+    public Matrix(double value, int rows, int cols) {
+        this.rows = rows;
+        this.cols = cols;
+        for(int i=0; i<rows; i++) {
+            for(int j=0; j<cols; j++) {
+                matrix.get(i).set(j, value);
+            }
+        }
+    }
+    
+    private double get(int i, int j) {
+        return 1;
+    }
+    
+    private double set(int i, int j, double value) {
+        return 1;
+    }
+    
     public Matrix add(Matrix m) {
-        Matrix tmp;
-        return null;
+        if(this.cols != m.cols || this.rows != m.rows) 
+            return null;
+        else {
+            Matrix tmp = new Matrix(0,m.rows,m.cols);
+            for(int i=0; i<this.rows; i++)
+                for(int j=0; j<this.cols; j++)
+                    tmp.set(i, j, this.get(i, j) + m.get(i, j));
+            return tmp;
+        }
     }
     
     public Matrix sub(Matrix m) {
@@ -36,5 +61,9 @@ public class Matrix {
     
     public Matrix tran(Matrix m) {
         return null;
+    }
+    
+    public String toString() {
+        return String.format("oi");
     }
 }
