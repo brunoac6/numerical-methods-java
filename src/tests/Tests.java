@@ -3,6 +3,7 @@ package tests;
 import datastructures.Complex;
 import datastructures.Vector;
 import datastructures.HugeInteger;
+import datastructures.Matrix;
 
 public class Tests {
 
@@ -24,6 +25,15 @@ public class Tests {
         /* Test Class HugeInteger */
         HugeInteger i1 = new HugeInteger("12392972309239822983293",10);
         System.out.println(i1);
+        
+        /* Test Class Matrix */
+        double m[][] = new double[2][2];
+        m[0][0] = 1;
+        m[0][1] = 5;
+        m[1][0] = 9;
+        m[1][1] = 4.4;
+        Matrix m1 = new Matrix(m,2,2);
+        System.out.println(m1.get(1, 0));
     }
     
 }

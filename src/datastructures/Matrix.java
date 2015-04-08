@@ -31,8 +31,8 @@ public class Matrix {
         }
     }
     
-    private double get(int i, int j) {
-        return 1;
+    public double get(int i, int j) {
+        return matrix.get(i).get(j);
     }
     
     private double set(int i, int j, double value) {
