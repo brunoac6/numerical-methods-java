@@ -3,7 +3,7 @@ package datastructures;
 import java.util.ArrayList;
 
 public class Matrix {
-    private ArrayList<ArrayList<Double>> matrix;
+    private double[][] matrix;
     private int rows;
     private int cols;
     
@@ -12,31 +12,33 @@ public class Matrix {
     }
     
     public Matrix(double m[][], int rows, int cols) {
+        matrix = new double[rows][cols];
         this.rows = rows;
         this.cols = cols;
         for(int i=0; i<rows; i++) {
             for(int j=0; j<cols; j++) {
-                matrix.get(i).set(j, m[i][j]);
+                this.matrix[i][j] = m[i][j];
             }
         }
     }
     
     public Matrix(double value, int rows, int cols) {
+        matrix = new double[rows][cols];
         this.rows = rows;
         this.cols = cols;
         for(int i=0; i<rows; i++) {
             for(int j=0; j<cols; j++) {
-                matrix.get(i).set(j, value);
+                matrix[i][j] = value;
             }
         }
     }
     
     public double get(int i, int j) {
-        return matrix.get(i).get(j);
+        return matrix[i][j];
     }
     
-    private double set(int i, int j, double value) {
-        return 1;
+    private void set(int i, int j, double value) {
+        matrix[i][j] = value;
     }
     
     public Matrix add(Matrix m) {
@@ -46,7 +48,7 @@ public class Matrix {
             Matrix tmp = new Matrix(0,m.rows,m.cols);
             for(int i=0; i<this.rows; i++)
                 for(int j=0; j<this.cols; j++)
-                    tmp.set(i, j, this.get(i, j) + m.get(i, j));
+                    tmp.set(i, j, m.get(i, j) + this.matrix[i][j]);
             return tmp;
         }
     }
