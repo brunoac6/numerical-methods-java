@@ -4,11 +4,12 @@ import datastructures.Complex;
 import datastructures.Vector;
 import datastructures.HugeInteger;
 import datastructures.Matrix;
+import datastructures.Table;
 
 public class Tests {
 
     public static void main(String[] args) {
-        
+            
         /* Testar a Classe Complex */
         Complex z1 = new Complex(1, 2);
         Complex z2 = new Complex(1, -2);
@@ -28,12 +29,16 @@ public class Tests {
         
         /* Test Class Matrix */
         double m[][] = new double[2][2];
-        m[0][0] = 1;
+        m[0][0] = 1; 
         m[0][1] = 5;
         m[1][0] = 9;
         m[1][1] = 4.4;
         Matrix m1 = new Matrix(m,2,2);
         System.out.println(m1.get(1, 0));
+        
+        Table t = new Table("Testando Table", m1);
+        t.setColNames("t_i", "w_i");
+        t.printTable();
     }
     
 }
