@@ -20,7 +20,7 @@ public class Tests {
         Vector v1 = new Vector(1,2,3);
         Vector v2 = new Vector(4,3,2);
         
-        System.out.println(v1.dot(v2));
+        System.out.println(v1.add(v2));
         System.out.println(v1);
         
         /* Test Class HugeInteger */
