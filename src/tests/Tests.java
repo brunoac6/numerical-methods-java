@@ -5,6 +5,7 @@ import datastructures.Vector;
 import datastructures.HugeInteger;
 import datastructures.Matrix;
 import datastructures.Table;
+import utils.Evaluate;
 
 public class Tests {
 
@@ -39,6 +40,8 @@ public class Tests {
         Table t = new Table("Testando Table", m1);
         t.setColNames("t_i", "w_i");
         t.printTable();
+        
+        Evaluate.expression("5 - (4 + 1)");
     }
     
 }
