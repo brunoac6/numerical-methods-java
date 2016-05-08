@@ -12,11 +12,15 @@ public class Tests {
     public static void main(String[] args) {
             
         /* Testar a Classe Complex */
-        Complex z1 = new Complex(1, 2);
-        Complex z2 = new Complex(1, -2);
+        Complex z1 = new Complex(1, 2); // 1 + 2j
+        Complex z2 = new Complex(5, -3); // 1 - 2j
         
-        System.out.println(z1.sub(z2));
-        
+        System.out.println("--TEST Class Complex--");
+        System.out.printf("Sum: (%s) + (%s) = %s\n", z1, z2,z1.add(z2));
+        System.out.printf("Sub: (%s) - (%s) = %s\n", z1, z2,z1.sub(z2));
+        System.out.printf("Mul: (%s) * (%s) = %s\n", z1, z2,z1.mul(z2));
+        System.out.printf("Conj: (%s)' = %s\n\n", z1, z1.conj());
+
         /* Test Class Vector */
         Vector v1 = new Vector(1,2,3);
         Vector v2 = new Vector(4,3,2);
@@ -41,7 +45,7 @@ public class Tests {
         t.setColNames("t_i", "w_i");
         t.printTable();
         
-        Evaluate.expression("5 - (4 + 1)");
+        //Evaluate.expression("5 - (4 + 1)");
     }
     
 }

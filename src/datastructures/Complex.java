@@ -18,11 +18,12 @@ public class Complex {
     }
     
     public Complex mul(Complex z) {
-        return new Complex(this.Re - z.Re, this.Im - z.Im);
+        return new Complex(this.Re*z.Re - this.Im*z.Im, this.Re*z.Im + this.Im*z.Re);
     }
     
-    public Complex conj(Complex z) {
-        return new Complex(this.Re - z.Re, this.Im - z.Im);
+    public Complex conj() {
+        this.Im *= -1;
+        return this;
     }
     
     @Override
